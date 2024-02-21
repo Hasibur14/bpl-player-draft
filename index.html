@@ -5,13 +5,283 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BPL</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 
 <body>
-    <header>
+    <header class="container mx-auto my-16">
+        <div class="navbar bg-gray-100 rounded-lg">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a>Item 1</a></li>
+                        <li>
+                            <a>Parent</a>
+                            <ul class="p-2">
+                                <li><a>Submenu 1</a></li>
+                                <li><a>Submenu 2</a></li>
+                            </ul>
+                        </li>
+                        <li><a>Item 3</a></li>
+                    </ul>
+                </div>
+                <div class="flex items-center">
+                    <img class="w-14" src="./images/bpl.jpg" alt="">
+                    <h2 class="text-3xl font-bold bg-gradient-to-r from-green to-blue-red ">
+                        Bangladesh Premier
+                        League</h2>
+                </div>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <div class="class=" menu menu-horizontal px-1"">
+                    <div class="flex space-x-16 ml-44">
+                        <h4 class="text-2xl font-bold">Budget <span id="budget">35</span></h4>
+                        <h4 class="text-2xl font-bold">Card <span id="budget">0</span></h4>
+                        <h4 class="text-2xl font-bold">Left <span id="budget">8</span></h4>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-end">
+                <a class="btn">Buy Now</a>
+            </div>
+        </div>
 
     </header>
-    <main>
+    <main class="">
+        <!--...........banner section.......-->
+        <section class="container mx-auto my-10">
+            <div class="carousel w-full">
+                <div id="slide1" class="carousel-item relative w-full">
+                    <img src="./images/bpl-1.jpg" class="w-full rounded-lg" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide4" class="btn btn-circle">❮</a>
+                        <a href="#slide2" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide2" class="carousel-item relative w-full">
+                    <img src="./images/bpl-2.jpeg" class="w-full" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide1" class="btn btn-circle">❮</a>
+                        <a href="#slide3" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide3" class="carousel-item relative w-full">
+                    <img src="./images/bpl-3.jpg" class="w-full" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide2" class="btn btn-circle">❮</a>
+                        <a href="#slide4" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+                <div id="slide4" class="carousel-item relative w-full">
+                    <img src="https://daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.jpg" class="w-full" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                        <a href="#slide3" class="btn btn-circle">❮</a>
+                        <a href="#slide1" class="btn btn-circle">❯</a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- player card -->
+        <section class="container mx-auto my-16">
+            <div class="grid grid-cols-1 lg:grid-cols-3 space-y-12">
+                <!-- player-1 -->
+                <div class="card lg:w-80 bg-base-200 shadow-xl">
+                    <div class="card-body">
+                        <div class="player-btn space-y-2 items-center text-center">
+                            <h5 class="text-2xl font-bold">Shakib Al Hasan</h5>
+                            <h5 class="text-xl font-bold">Price: <span>300</span> $</h5>
+                            <h5 class="text-xl font-bold">Category: <span>all-rounder</span></h5>
+                            <button class="btn bg-green-500 text-white">Add to Cart</button>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- player-2 -->
+                <div class="card lg:w-80 bg-base-200 shadow-xl">
+                    <div class="card-body">
+                        <div class="player-btn space-y-2 items-center text-center">
+                            <h5 class="text-2xl font-bold">Tamim Iqbal</h5>
+                            <h5 class="text-xl font-bold">Price: <span>300</span> $</h5>
+                            <h5 class="text-xl font-bold">Category: <span>Batter</span></h5>
+                            <button class="btn bg-green-500 text-white">Add to Cart</button>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- player-3 -->
+                <div class="card lg:w-80 bg-base-200 shadow-xl">
+                    <div class="card-body">
+                        <div class="player-btn space-y-2 items-center text-center">
+                            <h5 class="text-2xl font-bold">Wicketkeeper Batter</h5>
+                            <h5 class="text-xl font-bold">Price: <span>300</span> $</h5>
+                            <h5 class="text-xl font-bold">Category: <span>kipper/Batter</span></h5>
+                            <button class="btn bg-green-500 text-white">Add to Cart</button>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- player-4 -->
+                <div class="card lg:w-80 bg-base-200 shadow-xl">
+                    <div class="card-body">
+                        <div class="player-btn space-y-2 items-center text-center">
+                            <h5 class="text-2xl font-bold">Mahmudullah Riyad</h5>
+                            <h5 class="text-xl font-bold">Price: <span>300</span> $</h5>
+                            <h5 class="text-xl font-bold">Category: <span>all-rounder</span></h5>
+                            <button class="btn bg-green-500 text-white">Add to Cart</button>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- player-5 -->
+                <div class="card lg:w-80 bg-base-200 shadow-xl">
+                    <div class="card-body">
+                        <div class="player-btn space-y-2 items-center text-center">
+                            <h5 class="text-2xl font-bold">Litton Das</h5>
+                            <h5 class="text-xl font-bold">Price: <span>200</span> $</h5>
+                            <h5 class="text-xl font-bold">Category: <span>Wicketkeeper Batter</span></h5>
+                            <button class="btn bg-green-500 text-white">Add to Cart</button>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- player-6 -->
+                <div class="card lg:w-80 bg-base-200 shadow-xl">
+                    <div class="card-body">
+                        <div class="player-btn space-y-2 items-center text-center">
+                            <h5 class="text-2xl font-bold">Mustafizur Rahman</h5>
+                            <h5 class="text-xl font-bold">Price: <span>200</span> $</h5>
+                            <h5 class="text-xl font-bold">Category: <span>Bowler</span></h5>
+                            <button class="btn bg-green-500 text-white">Add to Cart</button>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- player-7 -->
+                <div class="card lg:w-80 bg-base-200 shadow-xl">
+                    <div class="card-body">
+                        <div class="player-btn space-y-2 items-center text-center">
+                            <h5 class="text-2xl font-bold">
+                                Najmul Hossain Shanto</h5>
+                            <h5 class="text-xl font-bold">Price: <span>200</span> $</h5>
+                            <h5 class="text-xl font-bold">Category: <span>Batter</span></h5>
+                            <button class="btn bg-green-500 text-white">Add to Cart</button>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- player-8 -->
+                <div class="card lg:w-80 bg-base-200 shadow-xl">
+                    <div class="card-body">
+                        <div class="player-btn space-y-2 items-center text-center">
+                            <h5 class="text-2xl font-bold">Mehidy Hasan Miraz</h5>
+                            <h5 class="text-xl font-bold">Price: <span>200</span> $</h5>
+                            <h5 class="text-xl font-bold">Category: <span>all-rounder</span></h5>
+                            <button class="btn bg-green-500 text-white">Add to Cart</button>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- player-9 -->
+                <div class="card lg:w-80 bg-base-200 shadow-xl">
+                    <div class="card-body">
+                        <div class="player-btn space-y-2 items-center text-center">
+                            <h5 class="text-2xl font-bold">Taskin Ahmed</h5>
+                            <h5 class="text-xl font-bold">Price: <span>200</span> $</h5>
+                            <h5 class="text-xl font-bold">Category: <span>Bowler</span></h5>
+                            <button class="btn bg-green-500 text-white">Add to Cart</button>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- player-10 -->
+                <div class="card lg:w-80 bg-base-200 shadow-xl">
+                    <div class="card-body">
+                        <div class="player-btn space-y-2 items-center text-center">
+                            <h5 class="text-2xl font-bold">Shakib Al Hasan</h5>
+                            <h5 class="text-xl font-bold">Price: <span>300</span> $</h5>
+                            <h5 class="text-xl font-bold">Category: <span>all-rounder</span></h5>
+                            <button class="btn bg-green-500 text-white">Add to Cart</button>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- player-11 -->
+                <div class="card lg:w-80 bg-base-200 shadow-xl">
+                    <div class="card-body">
+                        <div class="player-btn space-y-2 items-center text-center">
+                            <h5 class="text-2xl font-bold">
+                                Shoriful Islam</h5>
+                            <h5 class="text-xl font-bold">Price: <span>150</span> $</h5>
+                            <h5 class="text-xl font-bold">Category: <span>Bowler</span></h5>
+                            <button class="btn bg-green-500 text-white">Add to Cart</button>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- player-12 -->
+                <div class="card lg:w-80 bg-base-200 shadow-xl">
+                    <div class="card-body">
+                        <div class="player-btn space-y-2 items-center text-center">
+                            <h5 class="text-2xl font-bold">Nasum Ahmed</h5>
+                            <h5 class="text-xl font-bold">Price: <span>100</span> $</h5>
+                            <h5 class="text-xl font-bold">Category: <span>Bowler</span></h5>
+                            <button class="btn bg-green-500 text-white">Add to Cart</button>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- player-12 -->
+                <div class="card lg:w-80 bg-base-200 shadow-xl">
+                    <div class="card-body">
+                        <div class="player-btn space-y-2 items-center text-center">
+                            <h5 class="text-2xl font-bold">Mahedi Hasan</h5>
+                            <h5 class="text-xl font-bold">Price: <span>100</span> $</h5>
+                            <h5 class="text-xl font-bold">Category: <span>all-rounder</span></h5>
+                            <button class="btn bg-green-500 text-white">Add to Cart</button>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- player-12 -->
+                <div class="card lg:w-80 bg-base-200 shadow-xl">
+                    <div class="card-body">
+                        <div class="player-btn space-y-2 items-center text-center">
+                            <h5 class="text-2xl font-bold">Mahedi Hasan</h5>
+                            <h5 class="text-xl font-bold">Price: <span>100</span> $</h5>
+                            <h5 class="text-xl font-bold">Category: <span>all-rounder</span></h5>
+                            <button class="btn bg-green-500 text-white">Add to Cart</button>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- player-12 -->
+                <div class="card lg:w-80 bg-base-200 shadow-xl">
+                    <div class="card-body">
+                        <div class="player-btn space-y-2 items-center text-center">
+                            <h5 class="text-2xl font-bold">Mahedi Hasan</h5>
+                            <h5 class="text-xl font-bold">Price: <span>100</span> $</h5>
+                            <h5 class="text-xl font-bold">Category: <span>all-rounder</span></h5>
+                            <button class="btn bg-green-500 text-white">Add to Cart</button>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
 
     </main>
     <footer>
