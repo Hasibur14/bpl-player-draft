@@ -1,0 +1,4 @@
+.selected-st{
+    display: flex;
+    justify-content: space-around;
+}
