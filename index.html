@@ -28,9 +28,9 @@
                         class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                         <li>
                             <ul class="p-2">
-                                <h4 class="text-xl font-bold">Budget <span id="budget">3500</span> $</h4>
-                                <h4 class="text-xl font-bold">Card <span id="card">0</span></h4>
-                                <h4 class="text-xl font-bold">Left <span id="left">8</span></h4>
+                                <h4 class="text-xl font-semibold">Budget <span>2500 </span> $ </h4>
+                                <h4 class="text-xl font-semibold">Card <span>0</span></h4>
+                                <h4 class="text-xl font-semibold">Left <span>8</span></h4>
                             </ul>
                         </li>
                     </ul>
@@ -46,9 +46,9 @@
             <div class="navbar-center hidden lg:flex">
                 <div class=" menu menu-horizontal px-1">
                     <div class="flex space-x-16 ml-44">
-                        <h4 class="text-2xl font-bold">Budget <span id="budget">3500</span>$</h4>
-                        <h4 class="text-2xl font-bold">Card <span id="card">0</span></h4>
-                        <h4 class="text-2xl font-bold">Left <span id="left">8</span></h4>
+                        <h4 class="text-2xl font-semibold">Budget <span id="budget">3500</span>$</h4>
+                        <h4 class="text-2xl font-semibold">Card <span id="card">0</span></h4>
+                        <h4 class="text-2xl font-semibold">Left <span id="left">8</span></h4>
                     </div>
                 </div>
             </div>
@@ -286,7 +286,7 @@
 
                 <!-- right-part -->
                 <div class="p-2 lg:p-0">
-                    <div class="lg:w-[450px] bg-base-200 p-6 space-y-2 text-xl font-bold rounded-xl border-emerald-300
+                    <div class="lg:w-[450px] bg-base-200 p-6 space-y-2 text-xl font-bold rounded-xl border-red-500
                         border-2 shadow-xl">
                         <h2 class="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-300">Buy player
                             <span id="cart-count" class="bg-green-400 text-white p-1 rounded-full text-lg">0</span>
@@ -309,12 +309,10 @@
                             <input id="input-field"
                                 class="w-36 lg:w-[300px] h-14 text-lg font-semibold rounded-lg p-6 opacity-75 "
                                 type="text" placeholder="Have any copupon?">
-                            <button id="apply-btn" class="btn bg-[#1DD100] h-14">Apply</button>
+                            <button onclick="updateGrandTotal('apply-btn')" id="apply-btn"
+                                class="btn bg-[#1DD100] h-14">Apply</button>
                         </div>
-                        <div class="flex justify-between">
-                            <p>Discount</p>
-                            <p><span id="discountPrice">0</span></p>
-                        </div>
+
                         <div class="flex justify-between">
                             <p>Grand Total</p>
                             <p><span id="grand-total">0</span></p>

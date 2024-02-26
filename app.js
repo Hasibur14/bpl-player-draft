@@ -11,6 +11,21 @@ for (const btn of allBtn) {
 
         const selectedContainer = document.getElementById('Selected-container');
 
+
+        //Budget
+        const budget = getConvertedValue("budget");
+        document.getElementById('budget').innerText = budget - parseInt(price);
+
+        // card count
+        const cardCount = getConvertedValue('card');
+        document.getElementById('card').innerText = cardCount + 1;
+
+        // left Card
+        const left = getConvertedValue('left');
+        document.getElementById('left').innerText = left - 1
+
+
+
         const div = document.createElement('div');
         div.classList.add('selected-st')
 
@@ -28,10 +43,30 @@ for (const btn of allBtn) {
         selectedContainer.appendChild(div)
 
         updateTotalPrice(price);
-        updateGrandTotal(price)
+        updateGrandTotal()
 
     });
 };
+
+
+
+function updateGrandTotal(status) {
+    const totalPrice = getConvertedValue('total-price');
+    if (status == undefined) {
+        document.getElementById('grand-total').innerText = totalPrice;
+    }
+    else {
+        const couponCode = document.getElementById('input-field').value;
+        if (couponCode === 'BPL2024') {
+            let discount = totalPrice * 0.2;
+            document.getElementById('grand-total').innerText = totalPrice - discount;
+        }
+        else {
+            alert('Please Enter Valid Coupon')
+        }
+    }
+};
+
 
 
 
@@ -40,14 +75,6 @@ function updateTotalPrice(value) {
     const sum = totalPrice + parseInt(value);
     document.getElementById('total-price').innerText = sum;
 };
-
-
-function updateGrandTotal(value){
-    const grandTotal = getConvertedValue('grand-total');
-    const sum = grandTotal + parseInt(value);
-    document.getElementById('grand-total').innerText = sum ;
-}
-
 
 
 //value converted
