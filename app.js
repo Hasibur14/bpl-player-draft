@@ -11,6 +11,23 @@ for (const btn of allBtn) {
 
         const selectedContainer = document.getElementById('Selected-container');
 
+        e.target.setAttribute("disabled",false);
+        e.target.parentNode.parentNode.style.backgroundColor = "gray";
+
+
+        // card limit
+        const cardCountLimit = getConvertedValue("card");
+        if (cardCountLimit + 1 > 8) {
+            alert('You cant more then 8 Player Perches');
+            return;
+        };
+
+        // left Limit
+        const leftCount = getConvertedValue('left');
+        if (leftCount > 8) {
+            alert()
+            return;
+        };
 
         //Budget
         const budget = getConvertedValue("budget");
@@ -22,7 +39,11 @@ for (const btn of allBtn) {
 
         // left Card
         const left = getConvertedValue('left');
-        document.getElementById('left').innerText = left - 1
+        document.getElementById('left').innerText = left - 1;
+
+        // my card 
+        const myCard = getConvertedValue('my-cart-count');
+        document.getElementById('my-cart-count').innerHTML = myCard + 1;
 
 
 
